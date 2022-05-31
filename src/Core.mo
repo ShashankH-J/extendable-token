@@ -14,6 +14,7 @@ import Nat32 "mo:base/Nat32";
 import AID "./util/AccountIdentifier";
 import Hex "./util/Hex";
 import CRC32 "./util/CRC32";
+import PrincipalEXT "./util/Principal";
 
 module ExtCore = {
   public type AccountIdentifier = AID.AccountIdentifier;
