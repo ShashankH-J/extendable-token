@@ -94,7 +94,7 @@ module ExtCore = {
     };
     public func fromBytes(c : [Nat8], i : TokenIndex) : TokenIdentifier {
       let bytes : [Nat8] = Array.append(Array.append(tds, c), nat32tobytes(i));
-      return Principal.toText(PrincipalEXT.fromBlob(Blob.fromArray(bytes)));
+      return Hex.encode(Array.append(crc, bytes));
     };
     
     //Coz can't get principal directly, we can compare the bytes
